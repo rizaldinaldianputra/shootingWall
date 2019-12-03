@@ -1,9 +1,6 @@
 $(function () {
 'use strict';
-    //preloader
-    $(window).on('load',function(){
-        $('.preloader').addClass('loading');
-    })
+
     // navbar
      $(window).scroll(function(){
          $('nav').toggleClass('scrolled',$(this).scrollTop() > 280);
