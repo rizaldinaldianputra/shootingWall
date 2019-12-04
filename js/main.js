@@ -1,9 +1,14 @@
 $(function () {
 'use strict';
  //preloader
-    $(window).on('load',function(){
-        $('.preloader').addClass('loading');
-    })
+      $(" .loading-overlay .loader").fadeOut(2000,function (){
+        $("body").css("overflow","auto");
+       $(this).parent().fadeOut(1000,
+       function (){
+        $(this).remove();
+       });	
+   	});
+	
     // navbar
      $(window).scroll(function(){
          $('nav').toggleClass('scrolled',$(this).scrollTop() > 280);
